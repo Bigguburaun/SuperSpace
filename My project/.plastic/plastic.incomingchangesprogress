@@ -1,0 +1,20 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      3
+    ],
+    "SourceCsetId": 4,
+    "DestinationCsetId": 3,
+    "FileConflicts": [
+      {
+        "Path": "/ProjectSettings/PackageManagerSettings.asset",
+        "ItemId": 146,
+        "ParentItemId": 131,
+        "BaseRevId": 115,
+        "SourceRevId": 216,
+        "DestinationRevId": 115
+      }
+    ]
+  }
+]
