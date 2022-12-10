@@ -5,6 +5,7 @@ using UnityEngine;
 public class NormalProjectileBehavior : MonoBehaviour
 {
     public float damage = 1;
+    public float type; //Type so player/enemy bullets don't hit their owners
     void Start()
     {
         Destroy(gameObject, 3);
@@ -19,11 +20,14 @@ public class NormalProjectileBehavior : MonoBehaviour
     {
         Collider2D collider = collision.collider;
         IDamageable damageable = collider.GetComponent<IDamageable>();
-        if(damageable != null)
+        if ((type == 0 && collision.gameObject.tag != "Player") || (type == 1 && collision.gameObject.tag != "Enemy"))
         {
-            damageable.OnHit(damage);
+            if (damageable != null)
+            {
+                damageable.OnHit(damage);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
 }

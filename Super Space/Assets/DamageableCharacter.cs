@@ -42,6 +42,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
             if(_health <= 0)
             {
+                if (gameObject.tag != "player")
+                    OnObjectDestroyed();
                 //animator.SetBool("isAlive", false);
             }
         }

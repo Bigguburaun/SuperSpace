@@ -18,6 +18,7 @@ public class PlayerActions : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            ProjectilePrefab.type = 0;
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
     }
