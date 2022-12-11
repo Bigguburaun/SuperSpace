@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float flTurnSpeed = 0f;
     [SerializeField] private float flSpeed = 0f;
     [SerializeField] private float flMaxVelocity = 0f;
+    public Vector2 dampVelocity;
 
     private Vector2 movement;
 
@@ -19,6 +20,20 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.velocity = Vector2.SmoothDamp(rb.velocity, Vector2.zero, ref dampVelocity, 0.3f);
+
+            if (Mathf.Abs(rb.angularVelocity) > 0)
+            {
+                rb.angularDrag = 10;
+            }
+
+        }
+        else
+        {
+            rb.angularDrag = 0;
+        }
         float yAxis = Input.GetAxis("Vertical");
         float xAxis = Input.GetAxis("Horizontal");
 

@@ -18,10 +18,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.Health <= 0)
+        healthBar.fillAmount = Mathf.Clamp(player.Health / maxHealth, 0, 1);
+        if (player.Health <= 0)
         {
             player.OnObjectDestroyed();
         }
-        healthBar.fillAmount = Mathf.Clamp(player.Health / maxHealth, 0, 1);
     }
 }

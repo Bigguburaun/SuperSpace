@@ -9,11 +9,19 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     Collider2D physicsCollider;
     Rigidbody2D rb;
     Animator animator;
+    private float invincibleTimeElapsed = 0f;
+    public bool _invincible;
+    public float invincibiltyTime = 0f;
     //public GameObject healthText;
 
     public void OnHit(float damage)
     {
-        Health -= damage;
+        if (!Invincible)
+        {
+            Health -= damage;
+            if (gameObject.tag != "player")
+                Invincible = true;
+        }
     }
 
     public void OnHit(float damage, Vector2 knockback)
@@ -24,7 +32,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public float Health
     {
-        set 
+        set
         {
             /*
             if (value < _health)
@@ -40,21 +48,47 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             */
             _health = value;
 
-            if(_health <= 0)
+            if (_health <= 0)
             {
-                if (gameObject.tag != "player")
+                if (gameObject.tag != "Player")
                     OnObjectDestroyed();
                 //animator.SetBool("isAlive", false);
             }
         }
-        get 
-        { 
-            return _health; 
+        get
+        {
+            return _health;
         }
     }
 
     public void OnObjectDestroyed()
     {
         Destroy(gameObject);
+    }
+
+    public bool Invincible
+    {
+        get { return _invincible; }
+        set
+        {
+            _invincible = value;
+
+            if (_invincible == true)
+                invincibleTimeElapsed = 0f;
+        }
+    }
+    
+
+    void FixedUpdate()
+    {
+        if (Invincible)
+        {
+            invincibleTimeElapsed += Time.deltaTime;
+
+            if(invincibleTimeElapsed > invincibiltyTime)
+            {
+                Invincible = false;
+            }
+        }
     }
 }
