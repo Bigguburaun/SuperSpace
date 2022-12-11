@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    public NormalProjectileBehavior ProjectilePrefab;
+    public GameObject ProjectilePrefab;
     public Transform LaunchOffset;
 
     // Start is called before the first frame update
@@ -18,8 +18,11 @@ public class PlayerActions : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            ProjectilePrefab.type = 0;
-            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            GameObject projectile = Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+            projectile.layer = 6;
+            var behavior = projectile.GetComponent<NormalProjectileBehavior>();
+            behavior.type = 0;
+            //behavior.size = 10;
         }
     }
 }

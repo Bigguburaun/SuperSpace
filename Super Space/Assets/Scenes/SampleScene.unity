@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 809878860}
   - component: {fileID: 809878861}
   - component: {fileID: 809878862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 812139360}
   - component: {fileID: 812139359}
   - component: {fileID: 812139361}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Triangle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7d7cb5b55ab5a44af7b00741054d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 2371662588626711804, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
+  ProjectilePrefab: {fileID: 8579171927963928984, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
   LaunchOffset: {fileID: 1444512986}
 --- !u!1 &1088723105
 GameObject:
@@ -1063,7 +1063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444512986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 1805831825}
   - component: {fileID: 1805831826}
   - component: {fileID: 1805831827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7d7cb5b55ab5a44af7b00741054d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 2371662588626711804, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
+  ProjectilePrefab: {fileID: 8579171927963928984, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
   LaunchOffset: {fileID: 1848537755}
 --- !u!114 &1805831826
 MonoBehaviour:
@@ -1240,7 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1848537755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LaunchOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}

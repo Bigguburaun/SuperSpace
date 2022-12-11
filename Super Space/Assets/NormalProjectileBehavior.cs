@@ -6,28 +6,29 @@ public class NormalProjectileBehavior : MonoBehaviour
 {
     public float damage = 1;
     public float type; //Type so player/enemy bullets don't hit their owners
+    public float size;
+    public float speed;
+    public float decayTime;
     void Start()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, decayTime);
+        gameObject.transform.localScale = new Vector3(size, size);
     }
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.up * Time.deltaTime * 30;
+        transform.position += transform.up * Time.deltaTime * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Collider2D collider = collision.collider;
         IDamageable damageable = collider.GetComponent<IDamageable>();
-        if ((type == 0 && collision.gameObject.tag != "Player") || (type == 1 && collision.gameObject.tag != "Enemy"))
+        if (damageable != null)
         {
-            if (damageable != null)
-            {
-                damageable.OnHit(damage);
-            }
-            Destroy(gameObject);
+            damageable.OnHit(damage);
         }
+        Destroy(gameObject);
     }
 
 }
