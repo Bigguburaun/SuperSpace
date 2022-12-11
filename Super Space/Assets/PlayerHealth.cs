@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth;
     public Image healthBar;
+    public GameObject deathMenu;
     public IDamageable player;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         if (player.Health <= 0)
         {
             player.OnObjectDestroyed();
+            deathMenu.SetActive(true);
         }
     }
 }
