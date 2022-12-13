@@ -24,5 +24,8 @@ public class PlayerActions : MonoBehaviour
             behavior.type = 0;
             //behavior.size = 10;
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.LoadLevel("MainMenu");
+        }
     }
 }
