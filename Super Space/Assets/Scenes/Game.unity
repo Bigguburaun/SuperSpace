@@ -811,7 +811,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1427,8 +1427,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079735988}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.0965, y: 0.0643, z: 10}
-  m_LocalScale: {x: 4.0823207, y: 1, z: 2.0424194}
+  m_LocalPosition: {x: -3.9655, y: 2.2464, z: 10}
+  m_LocalScale: {x: 11.864951, y: 1, z: 5.2039247}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7d7cb5b55ab5a44af7b00741054d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 8579171927963928984, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
+  ProjectilePrefab: {fileID: 8579171927963928984, guid: 270cfed153145bf4ea77a01ca3e621b0, type: 3}
   LaunchOffset: {fileID: 1848537755}
 --- !u!114 &1805831826
 MonoBehaviour:
