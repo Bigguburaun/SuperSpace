@@ -248,7 +248,7 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 8579171927963928984, guid: ff838a5fd3a3e9748963348eb45b3476, type: 3}
   LaunchOffset: {fileID: 7771027111310416434}
   fireRate: 3
-  size: 1
-  speed: 5
+  size: 4
+  speed: 30
   damage: 1
   decayTime: 3

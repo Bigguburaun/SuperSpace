@@ -170,6 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   type: 0
-  size: 1
-  speed: 50
+  size: 3
+  speed: 30
   decayTime: 4
